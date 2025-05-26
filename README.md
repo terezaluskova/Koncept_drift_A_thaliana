@@ -10,6 +10,7 @@ Notebook `Koncept_drift_arabidopsis_thaliana.ipynb` provádí analýzu metabolom
 - **Trénování a přetrénování modelů**: Použití modelů Random Forest, Lineární regrese a Support Vector Regression s přetrénováním na detekovaných vzorcích driftu.
 - **Evaluace**: Hodnocení výkonu modelů pomocí metrik jako R², MAE, MSE, RMSE a SMAPE pro různé teplotní scénáře.
 - **Vizualizace**: Generování boxplotů pro zobrazení distribuce dat.
+- **Korekce koncept driftu**: Přetrénování dat nebo znovu použití jiné funkce škálování dat.
 
 Analýza zkoumá pět scénářů:
 1. Trénování na 6°C → testování na 6°C
@@ -50,12 +51,6 @@ Ujistěte se, že máte nainstalovaný Python 3.8 nebo novější. Notebook pou�
 
    Případně nainstalujte požadované balíčky ručně, jak je uvedeno výše.
 
-3. Ujistěte se, že máte v adresáři projektu k dispozici požadované soubory Excel:
-   - `Metabolites_Ath_6C.xlsx`
-   - `Metabolites_Ath_16C.xlsx`
-   - `Phenotype_Ath_RGR_6.xlsx`
-   - `Phenotype_Ath_RGR_16.xlsx`
-
 ## Použití
 
 1. Umístěte požadované soubory Excel do stejného adresáře jako notebook.
@@ -70,29 +65,24 @@ Ujistěte se, že máte nainstalovaný Python 3.8 nebo novější. Notebook pou�
    - Vizualizovali distribuce dat
    - Detekovali koncept drift a přetrénovali modely
    - Vyhodnotili výkon modelů
+   - Provedli korekci pomocí přetrénování modelu nebo změňte škálování dat
 
-Notebook vypisuje metriky výkonu (např. R², MAE, MSE) pro každý model a scénář a ukládá vizualizace boxplotů jako PNG soubory.
+Notebook vypisuje metriky výkonu (např. R², MAE, MSE) pro každý model a scénář.
 
 ## Zdroj dat
 
 Data pocházejí ze studie:
 > Weiszmann, J., et al. (2023). Metabolome plasticity in 241 Arabidopsis thaliana accessions reveals evolutionary cold adaptation processes. *Plant Physiology*, 193(2), 980–1000. DOI: [10.1093/plphys/kiad298](https://doi.org/10.1093/plphys/kiad298)
 
-Soubory Excel obsahují koncentrace metabolitů a data RGR pro *Arabidopsis thaliana* při 6°C a 16°C.
 
 ## Struktura projektu
 
 - `Koncept_drift_arabidopsis_thaliana.ipynb`: Hlavní Jupyter Notebook s analytickou pipeline.
-- `Metabolites_Ath_6C.xlsx`: Koncentrace metabolitů při 6°C.
-- `Metabolites_Ath_16C.xlsx`: Koncentrace metabolitů při 16°C.
-- `Phenotype_Ath_RGR_6.xlsx`: Data RGR při 6°C.
-- `Phenotype_Ath_RGR_16.xlsx`: Data RGR při 16°C.
 - `README.md`: Tento soubor.
 
 ## Výsledky
 
 Notebook hodnotí tři regresní modely (Random Forest, Lineární regrese, Support Vector Regression) napříč různými teplotními scénáři s využitím DDM a EDDM pro detekci koncept driftu. Klíčová zjištění zahrnují:
-- Kombinované trénování na 6°C + 16°C dosahuje nejvyšších hodnot R² (až 0,98 pro Random Forest).
 - Lineární regrese má nízký výkon v meziteplotních scénářích (např. 6°C → 16°C).
 - Support Vector Regression vykazuje robustní výkon napříč scénáři.
 
