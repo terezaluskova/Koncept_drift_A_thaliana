@@ -2,7 +2,7 @@
 Tento repozitář obsahuje praktickou část bakalářské práce zaměřenou na problematiku koncept driftu v metabolomických predikcích u rostlin druhu Arabidopsis thaliana vystavených dvěma teplotním podmínkám (6°C a 16°C). Hlavní skript, Jupyter Notebook - Koncept_drift_arabidopsis_thaliana.ipynb. Tento repozitář demonstruje využití různých metod strojového učení, technik detekce a korekce koncept driftu a strategií zpracování dat s cílem zlepšit přesnost predikcí podmíněných environmentálním stresem.
 ## Přehled
 
-Notebook `Koncept_drift_arabidopsis_thaliana.ipynb` provádí analýzu metabolomických dat pro predikci relativní růstové rychlosti (RGR) za chladového stresu (6°C a 16°C) s využitím dat ze studie Weiszmann et al. (2023). Obsahuje:
+Notebook `Koncept_drift_Arabidopsis_thaliana.ipynb` provádí analýzu metabolomických dat pro predikci relativní růstové rychlosti (RGR) za chladového stresu (6°C a 16°C) s využitím dat ze studie Weiszmann et al. (2023). Obsahuje:
 
 - **Zpracování dat**: Načítání a extrakce koncentrací metabolitů a dat RGR ze souborů Excel.
 - **Škálování dat**: Implementace různých metod škálování (např. StandardScaler, MinMaxScaler, Pareto, VAST atd.).
@@ -77,7 +77,7 @@ Data pocházejí ze studie:
 
 ## Struktura projektu
 
-- `Koncept_drift_arabidopsis_thaliana.ipynb`: Hlavní Jupyter Notebook s analytickou pipeline.
+- `Koncept_drift_Arabidopsis_thaliana.ipynb`: Hlavní Jupyter Notebook s analytickou pipeline.
 - `README.md`: Tento soubor.
 
 ## Výsledky
